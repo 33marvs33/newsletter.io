@@ -21,53 +21,52 @@
 			.subscribe__container {
 				background-color: var(--White);
 				margin: 0 auto;
-				max-width: 550px;
+				max-width: 500px;
 				min-height: 100vh;
 				padding: 1rem;
 				display: flex;
 				flex-direction: column;
 				justify-content: center;
 				gap: 1.5rem;
-
-				h1 {
-					color: var(--Charcoal-Grey);
-				}
-				p {
-					color: var(--Charcoal-Grey);
-					font-weight: 600;
-
-					a {
-						text-decoration: none;
-						color: var(--Dark-Slate-Grey);
-						font-weight: 800;
-					}
-				}
-
-				.dismiss__button {
-					padding: 1rem;
-					position: relative;
-					top: calc(100vh - 80vh);
-					border: none;
-					background-color: var(--Dark-Slate-Grey);
-					color: var(--White);
-					border-radius: 10px;
-					cursor: pointer;
-					transition: all 0.55s ease;
-					text-decoration: none;
-					text-align: center;
-					font-size: 1.2rem;
-					&:hover {
-						background-color: var(--Tomato);
-					}
-				}
 			}
+			.subscribe__container h1 {
+				color: var(--Charcoal-Grey);
+			}
+			.subscribe__container p {
+				color: var(--Charcoal-Grey);
+				font-weight: 600;
+			}
+			.subscribe__container a {
+				text-decoration: none;
+				color: var(--Dark-Slate-Grey);
+				font-weight: 800;
+			}
+
+			.dismiss__button {
+				padding: 1rem;
+				position: relative;
+				top: calc(100vh - 80vh);
+				border: none;
+				background-color: var(--Dark-Slate-Grey);
+				color: var(--White) !important;
+				border-radius: 10px;
+				cursor: pointer;
+				transition: all 0.55s ease;
+				text-decoration: none;
+				text-align: center;
+				font-size: 1.2rem;
+			}
+			.dismiss__button:hover {
+				background-color: var(--Tomato);
+			}
+
 			.check__container {
 				height: 60px;
-				width: 50px;
+				width: 60px;
+			}
 
-				img {
-					max-width: 100%;
-				}
+			.check__container img {
+				max-width: 100%;
 			}
 
 			@media (min-width: 500px) {
@@ -76,37 +75,28 @@
 					min-height: 500px;
 					border-radius: 20px;
 					padding: 2rem;
-
-					h1 {
-						font-size: 2.5rem;
-					}
-
-					p {
-						color: var(--Charcoal-Grey);
-						font-weight: 600;
-						font-size: 1.2rem;
-
-						a {
-							text-decoration: none;
-							color: var(--Dark-Slate-Grey);
-							font-weight: 800;
-						}
-					}
-
-					.dismiss__button {
-						padding: 1.5rem;
-						top: 3vh;
-					}
 				}
-			}
-			@media (min-width: 935px) {
-				.subscribe__container {
-					background-color: var(--White);
-					margin: 0 auto;
+				.subscribe__container h1 {
+					font-size: 2.5rem;
+				}
+
+				.subscribe__container p {
+					color: var(--Charcoal-Grey);
+					font-weight: 600;
+					font-size: 1.2rem;
+				}
+				.subscribe__container a {
+					text-decoration: none;
+					color: var(--Dark-Slate-Grey);
+					font-weight: 800;
+				}
+
+				.dismiss__button {
+					padding: 1.5rem;
+					top: 3vh;
 				}
 			}
 		</style>
-		
 	</head>
 	<body>
 		<div class="wrapper">
