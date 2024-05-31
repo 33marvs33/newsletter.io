@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Subscribe PopUp</title>
+		<link rel="stylesheet" href="global.css" />
+
+		<style>
+			:root {
+				--Tomato: hsl(4, 100%, 67%);
+				--Dark-Slate-Grey: hsl(234, 29%, 20%);
+				--Charcoal-Grey: hsl(235, 18%, 26%);
+				--Grey: hsl(231, 7%, 60%);
+				--White: hsl(0, 0%, 100%);
+			}
+			.wrapper {
+				display: grid;
+				place-content: center;
+			}
+			.subscribe__container {
+				background-color: var(--White);
+				margin: 0 auto;
+				max-width: 550px;
+				min-height: 100vh;
+				padding: 1rem;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				gap: 1.5rem;
+
+				h1 {
+					color: var(--Charcoal-Grey);
+				}
+				p {
+					color: var(--Charcoal-Grey);
+					font-weight: 600;
+
+					a {
+						text-decoration: none;
+						color: var(--Dark-Slate-Grey);
+						font-weight: 800;
+					}
+				}
+
+				.dismiss__button {
+					padding: 1rem;
+					position: relative;
+					top: calc(100vh - 80vh);
+					border: none;
+					background-color: var(--Dark-Slate-Grey);
+					color: var(--White);
+					border-radius: 10px;
+					cursor: pointer;
+					transition: all 0.55s ease;
+					text-decoration: none;
+					text-align: center;
+					font-size: 1.2rem;
+					&:hover {
+						background-color: var(--Tomato);
+					}
+				}
+			}
+			.check__container {
+				height: 60px;
+				width: 50px;
+
+				img {
+					max-width: 100%;
+				}
+			}
+
+			@media (min-width: 500px) {
+				.subscribe__container {
+					max-width: 500px;
+					min-height: 500px;
+					border-radius: 20px;
+					padding: 2rem;
+
+					h1 {
+						font-size: 2.5rem;
+					}
+
+					p {
+						color: var(--Charcoal-Grey);
+						font-weight: 600;
+						font-size: 1.2rem;
+
+						a {
+							text-decoration: none;
+							color: var(--Dark-Slate-Grey);
+							font-weight: 800;
+						}
+					}
+
+					.dismiss__button {
+						padding: 1.5rem;
+						top: 3vh;
+					}
+				}
+			}
+			@media (min-width: 935px) {
+				.subscribe__container {
+					background-color: var(--White);
+					margin: 0 auto;
+				}
+			}
+		</style>
+		
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="subscribe__container">
+				<div class="check__container">
+					<img src="assets/images/icon-success.svg" alt="" />
+				</div>
+				<h1>
+					Thanks for <br />
+					subscribing!
+				</h1>
+				<p>
+					A confirmation email has been sent to
+					<strong><a href="#" class="email"></a></strong>. Please open it and
+					click the button inside to confirm your subscription
+				</p>
+				<a class="dismiss__button" href="index.html">Dismiss message</a>
+			</div>
+		</div>
+
+		<script>
+			document.addEventListener("DOMContentLoaded", () => {
+				const submitedEmail = document.querySelector(".email");
+				const savedEmail = JSON.parse(localStorage.getItem("email"));
+				submitedEmail.textContent = savedEmail;
+			});
+		</script>
+	</body>
+</html>
