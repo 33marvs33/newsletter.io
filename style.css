@@ -25,7 +25,7 @@
 					margin: 1rem 0;
 					gap: 1rem;
 					&::before {
-						content: url(assets/images/icon-list.svg);
+						content: url(./assets/images/icon-list.svg);
 					}
 
 					p {
